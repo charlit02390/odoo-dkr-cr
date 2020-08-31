@@ -89,7 +89,7 @@ RUN chown odoo /etc/odoo/odoo.conf \
     && mkdir -p /mnt/extra-addons \
     && chown -R odoo /mnt/extra-addons \
     && mkdir -p /mnt/l10_cr \
-    && chown -R odoo /mnt/l10_cr \
+    && chown -R odoo /mnt/l10_cr
 VOLUME ["/var/lib/odoo", "/mnt/extra-addons", "/mnt/l10_cr"]
 
 RUN pip3 install -r requirements.txt
