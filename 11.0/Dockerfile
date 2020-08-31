@@ -68,8 +68,12 @@ COPY ./odoo.conf /etc/odoo/
 # Mount /var/lib/odoo to allow restoring filestore and /mnt/extra-addons for users addons
 RUN chown odoo /etc/odoo/odoo.conf \
     && mkdir -p /mnt/extra-addons \
-    && chown -R odoo /mnt/extra-addons
-VOLUME ["/var/lib/odoo", "/mnt/extra-addons"]
+    && chown -R odoo /mnt/extra-addons \
+    && mkdir -p /mnt/l10_cr \
+    && chown -R odoo /mnt/l10_cr
+VOLUME ["/var/lib/odoo", "/mnt/extra-addons", "/mnt/l10_cr"]
+
+RUN pip install requirements.txt
 
 # Expose Odoo services
 EXPOSE 8069 8071 8072
