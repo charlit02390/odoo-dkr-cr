@@ -1,7 +1,7 @@
 version: '3.4'
 services:
   web:
-    image: jackdevelopers/odoo:13.0
+    image: jokercharlie/odoo-dkr-cr:12.0
     depends_on:
       - db
     ports:
@@ -9,7 +9,7 @@ services:
     volumes:
       - odoo-web-data:/var/lib/odoo
       - ./config:/etc/odoo
-      - ./addons:/mnt/extra-addons
+      - ~/jack/pablo_addons_12:/mnt/extra-addons
       - ~/jack/python/l10n_cr:/mnt/l10_cr
   db:
     image: postgres:10

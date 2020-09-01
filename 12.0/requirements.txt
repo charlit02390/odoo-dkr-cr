@@ -20,3 +20,4 @@ paramiko
 phonenumbers
 vatnumber
 xlsxwriter
+pysftp==0.2.8
