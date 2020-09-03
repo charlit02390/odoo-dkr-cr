@@ -9,8 +9,7 @@ services:
     volumes:
       - odoo-web-data:/var/lib/odoo
       - ./config:/etc/odoo
-      - ~/jack/pablo_addons_12:/mnt/extra-addons
-      - ~/jack/python/l10n_cr:/mnt/l10_cr
+      - ./addons:/mnt/extra-addons
   db:
     image: postgres:10
     environment:

@@ -9,7 +9,7 @@ passlib
 werkzeug
 python-dateutil
 PyYAML
-psycopg2
+psycopg2-binary
 psutil
 image
 jinja2

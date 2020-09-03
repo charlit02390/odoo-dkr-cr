@@ -9,7 +9,7 @@ passlib
 werkzeug
 python-dateutil
 PyYAML
-psycopg2
+psycopg2-binary
 psutil
 image
 jinja2
@@ -20,3 +20,4 @@ paramiko
 phonenumbers
 vatnumber
 xlsxwriter
+pysftp==0.2.8
