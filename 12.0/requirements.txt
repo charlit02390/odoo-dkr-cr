@@ -21,3 +21,5 @@ phonenumbers
 vatnumber
 xlsxwriter
 pysftp==0.2.8
+barcode
+python-libmagic
