@@ -1,7 +1,7 @@
 version: '3.5'
 services:
   web:
-    image: jokercharlie/odoo-dkr-cr:13.0
+    image: jokercharlie/odoo-dkr-cr:14.0
     depends_on:
       - db
     ports:
@@ -11,7 +11,7 @@ services:
       - ./config:/etc/odoo
       - ./addons:/mnt/extra-addons
   db:
-    image: postgres:11
+    image: postgres:13
     environment:
       - POSTGRES_DB=postgres
       - POSTGRES_PASSWORD=odoo
