@@ -10,6 +10,10 @@ RUN python3 -m pip install --upgrade pip
 
 RUN python3 -m pip install wheel
 
+COPY server.py server.py
+
+RUN rm -rf /usr/lib/python3/dist-packages/odoo/service/server.py && mv server.py /usr/lib/python3/dist-packages/odoo/service
+
 COPY requirements.txt requirements.txt
 
 RUN python3 -m pip install -r requirements.txt
