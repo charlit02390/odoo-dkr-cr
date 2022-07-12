@@ -1,4 +1,4 @@
-FROM  --platform=linux/amd64 odoo:14.0
+FROM  --platform=linux/amd64 odoo:15.0
 MAINTAINER jokercharlie <cmonge@jackdevelopers.com>
 
 USER root
